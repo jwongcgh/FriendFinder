@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Survey</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="assets/javascript/logic.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<div class="container">
+    <div class="header">
+        <h1>Tell us about you</h1>
+    </div>
+
+    <!-- <div class="error_box"></div> -->
+
+    <hr>
+    <form id="survey" name="survey_form" action="#" method="POST">
+        <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name" maxlength="25">
+        </div>
+        <div class="form-row">
+            <label for="urlPhoto">Link to Photo Image</label>
+            <input type="url" id="urlPhoto">
+        </div>
+        <hr>
+        <!-- <div class="questionsField"> -->
+        <fieldset class="form-row">
+            <legend id=legend1><span>Question 1</span></legend>
+            <p id=question1>You like avocado but not tomatoes</p>
+            <select id="q1" required>
+                <option class="select" value="" disable selected hidden>Select an option</option>
+                <option value="1">(1) Strongly disagree</option>
+                <option value="2">(2)</option>
+                <option value="3">(3)</option>
+                <option value="4">(4)</option>
+                <option value="5">(5) Srongly agree</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend id=legend2><span>Question 2</span></legend>
+            <p id=question2>You prefer working at night than during daytime</p>
+            <select id="q2" required>
+                <option class="select" value="" disable selected hidden>Select an option</option>
+                <option value="1">(1) Strongly disagree</option>
+                <option value="2">(2)</option>
+                <option value="3">(3)</option>
+                <option value="4">(4)</option>
+                <option value="5">(5) Srongly agree</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend id=legend3><span>Question 3</span></legend>
+            <p id=question3>Here goes question</p>
+            <select id="q3" required>
+                <option class="select" value="" disable selected hidden>Select an option</option>
+                <option value="1">(1) Strongly disagree</option>
+                <option value="2">(2)</option>
+                <option value="3">(3)</option>
+                <option value="4">(4)</option>
+                <option value="5">(5) Srongly agree</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend id=legend4><span>Question 4</span></legend>
+            <p id=question4>Here goes question</p>
+            <select id="q4" required>
+                <option class="select" value="" disable selected hidden>Select an option</option>
+                <option value="1">(1) Strongly disagree</option>
+                <option value="2">(2)</option>
+                <option value="3">(3)</option>
+                <option value="4">(4)</option>
+                <option value="5">(5) Srongly agree</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend id=legend5><span>Question 5</span></legend>
+            <p id=question5>Here goes question</p>
+            <select id="q5" required>
+                <option class="select" value="" disable selected hidden>Select an option</option>
+                <option value="1">(1) Strongly disagree</option>
+                <option value="2">(2)</option>
+                <option value="3">(3)</option>
+                <option value="4">(4)</option>
+                <option value="5">(5) Srongly agree</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend id=legend6><span>Question 6</span></legend>
+            <p id=question6>Here goes question</p>
+            <select id="q6" required>
+                <option class="select" value="" disable selected hidden>Select an option</option>
+                <option value="1">(1) Strongly disagree</option>
+                <option value="2">(2)</option>
+                <option value="3">(3)</option>
+                <option value="4">(4)</option>
+                <option value="5">(5) Srongly agree</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend id=legend7><span>Question 7</span></legend>
+            <p id=question7>Here goes question</p>
+            <select id="q7" required>
+                <option class="select" value="" disable selected hidden>Select an option</option>
+                <option value="1">(1) Strongly disagree</option>
+                <option value="2">(2)</option>
+                <option value="3">(3)</option>
+                <option value="4">(4)</option>
+                <option value="5">(5) Srongly agree</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend id=legend8><span>Question 8</span></legend>
+            <p id=question8>Here goes question</p>
+            <select id="q8" required>
+                <option class="select" value="" disable selected hidden>Select an option</option>
+                <option value="1">(1) Strongly disagree</option>
+                <option value="2">(2)</option>
+                <option value="3">(3)</option>
+                <option value="4">(4)</option>
+                <option value="5">(5) Srongly agree</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend id=legend9><span>Question 9</span></legend>
+            <p id=question1>Here goes question</p>
+            <select id="q9" required>
+                <option class="select" value="" disable selected hidden>Select an option</option>
+                <option value="1">(1) Strongly disagree</option>
+                <option value="2">(2)</option>
+                <option value="3">(3)</option>
+                <option value="4">(4)</option>
+                <option value="5">(5) Srongly agree</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend id=legend10><span>Question 10</span></legend>
+            <p id=question1>Here goes question</p>
+            <select id="q10" required>
+                <option class="select" value="" disable selected hidden>Select an option</option>
+                <option value="1">(1) Strongly disagree</option>
+                <option value="2">(2)</option>
+                <option value="3">(3)</option>
+                <option value="4">(4)</option>
+                <option value="5">(5) Srongly agree</option>
+            </select>
+        </fieldset>
+    </form>
+
+    <!-- submit form -->
+    <div class="links">
+        <button type="submit" id="submit" value="submit">Submit</button>
+    </div>
+
+    <hr>
+
+    <!-- other links -->
+    <div class="links">
+        <div class="link">
+            <a href="/api/friends-data">API's friends list</a>
+        </div>
+        <div class="link">
+            <a href="/api/github">GitHub</a>
+        </div>
+        <div class="link">
+            <a href="./home">Home</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="foot">
+        <footer>
+            &#169; Copyright 2016 Jorge Wong
+        </footer>
+    </div>
+
+</div>
+<!-- end container -->
+<!-- Modal -->
+<div id="resultsModal" class="modal2">
+    <div id="modal-container">
+        <div id="modal-header">
+            <h4 class="modal-title">Hello! I am your new Best Friend</h4>
+        </div>
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="matchImg">
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+</div>
+</body>
+
+</html>
