@@ -5,7 +5,7 @@ var friendsArray = [
     choices: [2, 3, 4, 3, 2, 1, 2, 3, 4, 5]
   },
   {
-    name: "yummy alcohol",
+    name: "not telling you my name",
     photoLink: "http://www.theluxuryspot.com/wp-content/uploads/2015/01/w1.jpg",
     choices: [5, 4, 3, 2, 4, 3, 6, 2, 6, 2]
   },
@@ -15,12 +15,12 @@ var friendsArray = [
     choices: [4, 4, 4, 4, 5, 1, 1, 1, 3, 2]
   },
   {
-    name: "dorky",
+    name: "dorky forever",
     photoLink: "http://www.animalstodayradio.com/wp-content/uploads/2015/10/monkey_selfie_contentfullwidth.jpg",
     choices: [3, 3, 3, 3, 3, 4, 4, 4, 4, 4]
   },
   {
-    name: "ooops rabbit",
+    name: "rabbit, yup just call me rabbit",
     photoLink: "https://upload.wikimedia.org/wikipedia/commons/1/17/Holland_lop.JPG",
     choices: [1, 2, 3, 4, 5, 4, 3, 2, 1, 2]
   }

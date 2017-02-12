@@ -1,14 +1,5 @@
 $(document).ready(function() {
 
-    // console.log data array
-    // function runFriendsQuery() {
-    //     var currentURL = window.location.origin;
-    //     console.log(currentURL);
-    //     $.ajax({ url: currentURL + "/api/friends-data", method: "GET" }).done(function(arrayData) {
-    //     });
-    // }
-    // runFriendsQuery();
-
     // When the user clicks on <span> (x), close the modal
     var span = $(".close");
     span.onclick = function() {
@@ -35,7 +26,6 @@ $(document).ready(function() {
                 $("#q10").val()
             ]
         }
-        console.log(userData);
 
         var currentURL = window.location.origin;
 
@@ -49,19 +39,16 @@ $(document).ready(function() {
             // show image of new friend in a modal
             document.getElementById('resultsModal').style.display = "block";
 
+            // return to top of current page
+            $("html, body").animate({
+                scrollTop: 0
+            }, 200);
+
             // Get the <span> element that closes the modal, and clear form when modal is closed
             $(".close").on('click', function() {
                     document.getElementById('resultsModal').style.display = "none";
                     document.getElementById('survey').reset();
             });
-                // var span = document.getElementsByClassName("close")[0];
-                // Clear form when submitting
-
-            console.log(data);
-            // console.log(data);
         });
-
     });
-
-
 });
