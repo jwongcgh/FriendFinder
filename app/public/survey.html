@@ -13,16 +13,16 @@
     <div class="header">
         <h1>Tell us about you</h1>
     </div>
-    <!-- <div class="error_box"></div> -->
+
     <hr>
     <form id="survey" name="survey_form" action="#" method="POST">
         <div class="form-row">
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your Name" maxlength="25">
+            <input type="text" id="name" placeholder="Your Name" maxlength="25" required/>
         </div>
         <div class="form-row">
             <label for="urlPhoto">Link to Photo Image</label>
-            <input type="url" id="urlPhoto" placeholder="url to your photo">
+            <input type="url" id="urlPhoto" placeholder="url to your photo" required/>
         </div>
         <hr>
         <!-- <div class="questionsField"> -->
@@ -172,11 +172,11 @@
 
     <div class="foot">
         <footer>
-            &#169; Copyright 2016 Jorge Wong
+            &#169; Copyright 2017 Jorge Wong
         </footer>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal match display-->
 
     <div id="resultsModal" class="modal">
     <div id="modal-container">
@@ -189,6 +189,18 @@
             <!-- Modal Content (The Image) -->
             <img class="modal-content" id="matchImg" src="#" alt="">
         </div>
+    </div>
+
+    <!-- Modal error message -->
+    <div id="errorModal" class="modal">
+      <div id="errorModal-container">
+            <div id="errorModal-header">
+                <h4 id="emptyInput">All fields are required</h4>
+                <h4 id="emptyOption"></h4>
+            </div>
+            <!-- The Close Button -->
+            <span class="closeError">&times;</span>
+      </div>
     </div>
 
 </div>

@@ -1,16 +1,13 @@
 $(document).ready(function() {
-
-    // When the user clicks on <span> (x), close the modal
-    var span = $(".close");
-    span.onclick = function() {
-        $("resultsModal").style.display = "none";
-    }
+    var userData = {};
+    var missOption;
+    var emptyInput;
 
     // retrieve form information
     $("#submit").on("click", function(event) {
         event.preventDefault();
 
-        var userData = {
+        userData = {
             name: $("#name").val().trim(),
             urlPhoto: $("#urlPhoto").val().trim(),
             choices: [
@@ -27,6 +24,45 @@ $(document).ready(function() {
             ]
         }
 
+        // resetting missOptions array with each submit
+        missOption = [];
+        emptyInput = false;
+
+        runValidate();
+    }); // end on-click submit
+
+    function runValidate() {
+
+        if (userData.name == "" || userData.urlPhoto == "") {
+            emptyInput = true;
+            $("#emptyInput").text("Name / Photo Link are required");
+        } else { $("#emptyInput").text("Please enter missing information"); }
+
+        for (i in userData.choices) {
+            if (userData.choices[i] == "") {
+                missOption.push(" " + (1 + parseInt(i)));
+            }
+        }   // end for loop
+
+        var emptyOption = "You did not select option on questions: " + missOption;
+        if (missOption.length !== 0) { $("#emptyOption").text(emptyOption); }
+            else { $("#emptyOption").text("Please provide information"); }
+
+        // show error message if missing info from form
+        if (emptyInput || missOption.length !== 0) {
+            document.getElementById('errorModal').style.display = "block";
+            // close error modal
+            $(".closeError").on('click', function() {
+                document.getElementById('errorModal').style.display = "none";
+            });
+        } else {
+            // all is good, find friend
+            runPostData();
+        }
+    } // end validate
+
+
+    function runPostData() {
         var currentURL = window.location.origin;
 
         // post info from user into database
@@ -39,16 +75,17 @@ $(document).ready(function() {
             // show image of new friend in a modal
             document.getElementById('resultsModal').style.display = "block";
 
-            // return to top of current page
+            // return to top of current page where image of new friend is displayed
             $("html, body").animate({
                 scrollTop: 0
             }, 200);
 
-            // Get the <span> element that closes the modal, and clear form when modal is closed
+            // close modal, also reset form when modal is closed
             $(".close").on('click', function() {
-                    document.getElementById('resultsModal').style.display = "none";
-                    document.getElementById('survey').reset();
+                document.getElementById('resultsModal').style.display = "none";
+                document.getElementById('survey').reset();
             });
         });
-    });
-});
+    }   // end runPostData
+
+});   // end document.ready
